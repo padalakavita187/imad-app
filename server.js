@@ -5,6 +5,20 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne = {
+    title: 'Article One | Kavita Rani',
+    heading: 'Article-One';
+    date: 'Aug-11, 2017';
+    content: `
+            <p>
+                This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+            </p>
+            <p>
+                This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+            </p>
+    
+    `
+};
 function createTemplate(data){
     var title = data.title;
     var date = data.date;
@@ -38,7 +52,7 @@ function createTemplate(data){
     </html>
     `;
     return htmlTemplate;
-}
+};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
