@@ -6,10 +6,10 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-articleOne : {
+'articleOne' : {
     title: 'Article One | Kavita Rani',
     heading: 'Article-One',
-    date: 'Aug-11, 2017',
+    date: 'Aug-10, 2017',
     content: `
             <p>
                 This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
@@ -18,6 +18,18 @@ articleOne : {
                 This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
             </p>`
     },
+'articleTwo' :{
+    title: 'Article Two | Kavita Rani',
+    heading: 'Article-Two',
+    date: 'Aug-11, 2017',
+    content: `
+            <p>
+                This is the content for my second article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+            </p>
+            <p>
+                This is the content for my second article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+            </p>`
+},
 };
 function createTemplate(data){
     var title = data.title;
@@ -66,8 +78,11 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/article-one', function (req, res) {
-res.send(createTemplate(articleOne));
+app.get('/articleName', function (req, res) {
+    //articleName == article-One
+    //article[articleName] == {} content object for article one)
+    var articleName = res.params.articleName;
+res.send(createTemplate(articles[articleName]));
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
