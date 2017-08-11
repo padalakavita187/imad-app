@@ -82,7 +82,7 @@ app.get('/:articleName', function (req, res) {
     //articleName == article-One
     //article[articleName] == {} content object for article one)
     var articleName = req.params.articleName;
-res.send(createTemplate(articles[articleName]));
+    res.send(createTemplate(articles[articleName]));
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
