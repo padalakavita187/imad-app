@@ -24,13 +24,11 @@
                 This button <button id = "counter">Click me!</button> has been clicked <span id = "count">0 </span>times.
             </div>
         </div>
-        <script type="text/javascript">
+        <script>
             console.log('Loaded!');
             //counter code
             var button = document.getElementById('counter');
             button.onClick = function(){
-                
-                
                 counter = counter + 1;
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();
