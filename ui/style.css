@@ -19,7 +19,7 @@ body {
 .img-medium {
     height: 200px;
 }
-.center {
+.container {
     max-width: 800px;
     margin: auto;
     color: #656ff9;
