@@ -1,7 +1,7 @@
 console.log('Loaded!');
             //counter code 
             
-           /* var button = document.getElementById('counter');
+            var button = document.getElementById('counter');
             button.onClick = function(){
                 
                 //create a request object
@@ -26,13 +26,13 @@ console.log('Loaded!');
                request.open('GET',"http://padalakavita187.imad.hasura-app.io/counter",true);
                request.send(null);
                
-            };*/
-            //counter code
+            };
+              /* //counter code
             var button = document.getElementById('counter');
             var counter = 0;
             button.onclick = function(){
                 counter = counter + 1;
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();
-            };
+            };*/
             
