@@ -28,7 +28,7 @@ console.log('Loaded!');
                
             };
             
-        /*    //submit text java script
+           //submit text java script
             
             var submit = document.getElementById('submit_btn');
             submit.onclick = function(){
@@ -63,9 +63,9 @@ console.log('Loaded!');
               request.open('get','http://padalakavita187.imad.hasura-app.io/submit-name?name='+name,true);
               request.send(null);
             };
-            */
             
-            var nameInput = document.getElementById('name');
+            
+           /* var nameInput = document.getElementById('name');
             var name = nameInput.value;
             var submit = document.getElementById('submit_btn');
             submit.onclick = function(){
@@ -79,6 +79,7 @@ console.log('Loaded!');
                 
             };
                 
+            */
                 
                 
                 
