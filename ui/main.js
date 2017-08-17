@@ -11,7 +11,7 @@ console.log('Loaded!');
                 //capture the response and store it in a variable
                 
                 request.onreadystatechange = function(){
-                    if(request.readyState === XMLHttpRequest.Done){
+                    if(request.readyState === XMLHttpRequest.DONE){
                         
                         if(request.status === 200){
                             var counter = request.responseText;
@@ -23,7 +23,7 @@ console.log('Loaded!');
                
                //make the request
                
-               request.open('GET',"http://padalakavita187.imad.hasura-app.io/counter",true);
+               request.open('GET','http://padalakavita187.imad.hasura-app.io/counter',true);
                request.send(null);
                
             };
