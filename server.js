@@ -78,7 +78,7 @@ counter = counter + 1;
 res.send(counter.toString());
 });
 
-var names = [];
+var names = ['kavita'];
 app.get('/submit-name',function(req,res) {
     var name = req.query.name;
     names.push(name);
