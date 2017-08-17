@@ -1,16 +1,29 @@
 console.log('Loaded!');
-            //counter code
-            var counter = 0;
+            //counter code 
+            
             var button = document.getElementById('counter');
             button.onClick = function(){
                 
-                //make a request to counter end point
+                //create a request object
                 
-                //store it in a variable
+                var request = new XMLHttpRequest();
                 
-                //render the variable in the correct span
+                //capture the response and store it in a variable
                 
-                counter = counter + 1;
-                var span = document.getElementById('count');
-                span.innerHTML = counter.toString();
+                request.onreadystatechange = function(){
+                    if(request.readyState === XMLHttpRequest.Done){
+                        
+                        if(request.status === 200){
+                            var counter = request.responseText;
+                             var span = document.getElementById('count');
+                             span.innerHTML = counter.toString();
+                        }
+                    }
+                };
+               
+               //make the request
+               
+               request.open('GET',"http://padalakavita187.imad.hasura-app.io/counter",true);
+               request.send(null);
+               
             };
